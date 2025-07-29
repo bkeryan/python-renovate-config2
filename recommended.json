@@ -1,8 +1,8 @@
 {
     "$schema": "https://docs.renovatebot.com/renovate-schema.json",
     "extends": [
-        "github>bkeryan/python-renovate-config:default",
-        "github>bkeryan/python-renovate-config:presets/enableVulnerabilityAlerts",
+        "github>bkeryan/python-renovate-config2:default",
+        "github>bkeryan/python-renovate-config2:presets/enableVulnerabilityAlerts",
         "helpers:pinGitHubActionDigestsToSemver",
         ":rebaseStalePrs"
     ],
@@ -11,14 +11,14 @@
         {
             "description": "Update GitHub Actions early Monday mornings.",
             "extends": [
-                "github>bkeryan/python-renovate-config:presets/group/githubActions",
+                "github>bkeryan/python-renovate-config2:presets/group/githubActions",
                 "schedule:weekly"
             ]
         },
         {
             "description": "Update Python packages early Monday mornings.",
             "extends": [
-                "github>bkeryan/python-renovate-config:presets/group/python",
+                "github>bkeryan/python-renovate-config2:presets/group/python",
                 "schedule:weekly"
             ]
         },
@@ -32,7 +32,7 @@
         {
             "description": "Set minimumReleaseAge to 1 day for NI Python packages.",
             "extends": [
-                "github>bkeryan/python-renovate-config:presets/packages/niPython"
+                "github>bkeryan/python-renovate-config2:presets/packages/niPython"
             ],
             "minimumReleaseAge": "1 day"
         }
@@ -41,7 +41,7 @@
         "description": "Run lock file maintenance (updates) early Tuesday mornings.",
         "enabled": true,
         "extends": [
-            "github>bkeryan/python-renovate-config:presets/schedule/earlyTuesdays"
+            "github>bkeryan/python-renovate-config2:presets/schedule/earlyTuesdays"
         ]
     }
 }
